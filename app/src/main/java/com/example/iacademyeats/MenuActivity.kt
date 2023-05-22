@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -62,44 +63,46 @@ class MenuActivity : AppCompatActivity() {
         // Dummy data for demonstration purposes
         return when (concessionaireName) {
             "Concessionaire 1" -> arrayListOf(
-                MenuItem("Item 1", "Description 1", 10.0),
-                MenuItem("Item 2", "Description 2", 8.0),
-                MenuItem("Item 3", "Description 3", 12.0),
-                MenuItem("Item 4", "Description 4", 9.5)
+                MenuItem("Item 1", "Description 1", 10.0, R.drawable.cbtl_coffee),
+                MenuItem("Item 2", "Description 2", 8.0, R.drawable.cbtl_iceblend),
+                MenuItem("Item 3", "Description 3", 12.0, R.drawable.cbtl_tea),
+                MenuItem("Item 4", "Description 4", 9.5, R.drawable.cbtl_iceblend)
             )
             "Concessionaire 2" -> arrayListOf(
-                MenuItem("Item 5", "Description 5", 7.0),
-                MenuItem("Item 6", "Description 6", 11.0),
-                MenuItem("Item 7", "Description 7", 10.5),
-                MenuItem("Item 8", "Description 8", 6.5)
+                MenuItem("Item 5", "Description 5", 7.0, R.drawable.pocor_cheese),
+                MenuItem("Item 6", "Description 6", 11.0, R.drawable.pocor_chilibbq),
+                MenuItem("Item 7", "Description 7", 10.5, R.drawable.pocor_bbq),
+                MenuItem("Item 8", "Description 8", 6.5, R.drawable.pocor_sourcream)
             )
             "Concessionaire 3" -> arrayListOf(
-                MenuItem("Item 9", "Description 9", 9.5),
-                MenuItem("Item 10", "Description 10", 8.5),
-                MenuItem("Item 11", "Description 11", 11.5),
-                MenuItem("Item 12", "Description 12", 7.5)
+                MenuItem("Item 9", "Description 9", 9.5, R.drawable.kc_beef),
+                MenuItem("Item 10", "Description 10", 8.5, R.drawable.kc_chicken),
+                MenuItem("Item 11", "Description 11", 11.5, R.drawable.kc_pork),
+                MenuItem("Item 12", "Description 12", 7.5, R.drawable.kc_salmon)
             )
             else -> arrayListOf()
         }
     }
+
 
     // ViewHolder for the menu item
     private inner class MenuItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val nameTextView: TextView = itemView.findViewById(R.id.itemNameTextView)
         private val descriptionTextView: TextView = itemView.findViewById(R.id.itemDescriptionTextView)
         private val orderButton: Button = itemView.findViewById(R.id.orderButton)
+        private val itemImageView: ImageView = itemView.findViewById(R.id.itemImageView)
 
         fun bind(menuItem: MenuItem) {
             nameTextView.text = menuItem.name
             descriptionTextView.text = menuItem.description
+            itemImageView.setImageResource(menuItem.imageResId)
 
-            // Handle order button click
             orderButton.setOnClickListener {
-                // Replace with your own logic to send an email to the concessionaire with the selected food item
                 sendOrderEmail(menuItem)
             }
         }
     }
+
 
     // Adapter for the menu items
     private inner class MenuAdapter : RecyclerView.Adapter<MenuItemViewHolder>() {

@@ -7,12 +7,14 @@ import android.os.Parcelable
 data class MenuItem(
     val name: String?,
     val description: String?,
-    val price: Double
+    val price: Double,
+    val imageResId: Int
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
-        parcel.readDouble()
+        parcel.readDouble(),
+        parcel.readInt()
     ) {
     }
 
@@ -20,6 +22,7 @@ data class MenuItem(
         parcel.writeString(name)
         parcel.writeString(description)
         parcel.writeDouble(price)
+        parcel.writeInt(imageResId)
     }
 
     override fun describeContents(): Int {
