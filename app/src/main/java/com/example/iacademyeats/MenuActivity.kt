@@ -63,22 +63,22 @@ class MenuActivity : AppCompatActivity() {
         // Dummy data for demonstration purposes
         return when (concessionaireName) {
             "Concessionaire 1" -> arrayListOf(
-                MenuItem("Item 1", "Description 1", 10.0, R.drawable.cbtl_coffee),
-                MenuItem("Item 2", "Description 2", 8.0, R.drawable.cbtl_iceblend),
-                MenuItem("Item 3", "Description 3", 12.0, R.drawable.cbtl_tea),
-                MenuItem("Item 4", "Description 4", 9.5, R.drawable.cbtl_iceblend)
+                MenuItem("Caramel Macchiatto", "The Coffee Bean & Tea Leaf", 100.0, R.drawable.cbtl_coffee),
+                MenuItem("Pumpkin Spice Latte", "The Coffee Bean & Tea Leaf", 80.0, R.drawable.cbtl_iceblend),
+                MenuItem("Golden Monkey Special Tea", "The Coffee Bean & Tea Leaf", 120.0, R.drawable.cbtl_tea),
+                MenuItem("Americano", "The Coffee Bean & Tea Leaf", 90.0, R.drawable.cbtl_americano)
             )
             "Concessionaire 2" -> arrayListOf(
-                MenuItem("Item 5", "Description 5", 7.0, R.drawable.pocor_cheese),
-                MenuItem("Item 6", "Description 6", 11.0, R.drawable.pocor_chilibbq),
-                MenuItem("Item 7", "Description 7", 10.5, R.drawable.pocor_bbq),
-                MenuItem("Item 8", "Description 8", 6.5, R.drawable.pocor_sourcream)
+                MenuItem("Cheese", "Potato Corner", 70.0, R.drawable.pocor_cheese),
+                MenuItem("Chili BBQ", "Potato Corner", 60.0, R.drawable.pocor_chilibbq),
+                MenuItem("BBQ", "Potato Corner", 80.0, R.drawable.pocor_bbq),
+                MenuItem("Sour Cream", "Potato Corner", 60.0, R.drawable.pocor_sourcream)
             )
             "Concessionaire 3" -> arrayListOf(
-                MenuItem("Item 9", "Description 9", 9.5, R.drawable.kc_beef),
-                MenuItem("Item 10", "Description 10", 8.5, R.drawable.kc_chicken),
-                MenuItem("Item 11", "Description 11", 11.5, R.drawable.kc_pork),
-                MenuItem("Item 12", "Description 12", 7.5, R.drawable.kc_salmon)
+                MenuItem("Beef", "Kitchen City", 90.0, R.drawable.kc_beef),
+                MenuItem("Chicken", "Kitchen City", 80.0, R.drawable.kc_chicken),
+                MenuItem("Pork", "Kitchen City", 110.0, R.drawable.kc_pork),
+                MenuItem("Salmon", "Kitchen City", 70.0, R.drawable.kc_salmon)
             )
             else -> arrayListOf()
         }
@@ -89,12 +89,14 @@ class MenuActivity : AppCompatActivity() {
     private inner class MenuItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val nameTextView: TextView = itemView.findViewById(R.id.itemNameTextView)
         private val descriptionTextView: TextView = itemView.findViewById(R.id.itemDescriptionTextView)
+        private val priceTextView: TextView = itemView.findViewById(R.id.itemPriceTextView)
         private val orderButton: Button = itemView.findViewById(R.id.orderButton)
         private val itemImageView: ImageView = itemView.findViewById(R.id.itemImageView)
 
         fun bind(menuItem: MenuItem) {
             nameTextView.text = menuItem.name
             descriptionTextView.text = menuItem.description
+            priceTextView.text = "Price: ₱${menuItem.price}" // Display the price
             itemImageView.setImageResource(menuItem.imageResId)
 
             orderButton.setOnClickListener {
@@ -102,6 +104,7 @@ class MenuActivity : AppCompatActivity() {
             }
         }
     }
+
 
 
     // Adapter for the menu items

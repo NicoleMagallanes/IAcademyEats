@@ -6,12 +6,17 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.ImageView
 
 class ResultActivity : AppCompatActivity() {
+
+    private lateinit var itemImageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
+
+        itemImageView = findViewById(R.id.itemImageView)
 
         // Get the selected item from the intent
         val selectedItem = intent.getParcelableExtra<MenuItem>("selectedItem")
@@ -19,6 +24,9 @@ class ResultActivity : AppCompatActivity() {
         // Display the selected item in the result view
         val resultTextView: TextView = findViewById(R.id.resultTextView)
         resultTextView.text = "Selected Item: ${selectedItem?.name}\nPrice: ${selectedItem?.price}"
+
+        // Set the item image
+        itemImageView.setImageResource(selectedItem?.imageResId ?: 0)
 
         // Handle order button click
         val orderButton: Button = findViewById(R.id.orderButton)
@@ -35,7 +43,7 @@ class ResultActivity : AppCompatActivity() {
         val message = "Item: ${menuItem?.name}\nPrice: ${menuItem?.price}"
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.type = "text/plain"
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("concessionaire@example.com"))
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("sehunix026@gmail.com"))
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
         emailIntent.putExtra(Intent.EXTRA_TEXT, message)
         try {
