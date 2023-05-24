@@ -62,19 +62,19 @@ class MenuActivity : AppCompatActivity() {
     private fun loadMenuItems(concessionaireName: String): ArrayList<MenuItem> {
         // Dummy data for demonstration purposes
         return when (concessionaireName) {
-            "Concessionaire 1" -> arrayListOf(
+            "The Coffee Bean & Tea Leaf" -> arrayListOf(
                 MenuItem("Caramel Macchiatto", "The Coffee Bean & Tea Leaf", 100.0, R.drawable.cbtl_coffee),
                 MenuItem("Pumpkin Spice Latte", "The Coffee Bean & Tea Leaf", 80.0, R.drawable.cbtl_iceblend),
                 MenuItem("Golden Monkey Special Tea", "The Coffee Bean & Tea Leaf", 120.0, R.drawable.cbtl_tea),
                 MenuItem("Americano", "The Coffee Bean & Tea Leaf", 90.0, R.drawable.cbtl_americano)
             )
-            "Concessionaire 2" -> arrayListOf(
+            "Potato Corner" -> arrayListOf(
                 MenuItem("Cheese", "Potato Corner", 70.0, R.drawable.pocor_cheese),
                 MenuItem("Chili BBQ", "Potato Corner", 60.0, R.drawable.pocor_chilibbq),
                 MenuItem("BBQ", "Potato Corner", 80.0, R.drawable.pocor_bbq),
                 MenuItem("Sour Cream", "Potato Corner", 60.0, R.drawable.pocor_sourcream)
             )
-            "Concessionaire 3" -> arrayListOf(
+            "Kitchen City" -> arrayListOf(
                 MenuItem("Beef", "Kitchen City", 90.0, R.drawable.kc_beef),
                 MenuItem("Chicken", "Kitchen City", 80.0, R.drawable.kc_chicken),
                 MenuItem("Pork", "Kitchen City", 110.0, R.drawable.kc_pork),

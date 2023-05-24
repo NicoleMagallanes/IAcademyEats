@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MenuActivity">
+
     <!-- activity_menu.xml -->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -17,7 +19,8 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:padding="16dp" />
+            android:padding="16dp"
+            android:textColor="#000000" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/menuRecyclerView"
@@ -26,11 +29,14 @@
             android:layout_weight="1"
             android:paddingStart="16dp"
             android:paddingEnd="16dp" />
+
         <Button
             android:id="@+id/randomizerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Can't Pick???" />
+            android:text="Can't Pick???"
+            android:textColor="#ffffff" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

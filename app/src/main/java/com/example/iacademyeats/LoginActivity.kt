@@ -40,12 +40,12 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun isValidEmail(email: String): Boolean {
-        return Patterns.EMAIL_ADDRESS.matcher(email).matches() &&
-                email.endsWith("@iacademy.edu.ph")
+        val validEmailPattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@iacademy\\.edu\\.ph$"
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches() && email.matches(validEmailPattern.toRegex())
     }
 
     private fun isValidPassword(password: String): Boolean {
-        val passwordRegex = "^(?=.*[0-9])(?=.*[A-Z])(?=\\S+$).{8,}$"
+        val passwordRegex = "^(?=.*[0-9])(?=.*[A-Z])(?=\\S+\$).{8,}\$"
         return password.matches(passwordRegex.toRegex())
     }
 }

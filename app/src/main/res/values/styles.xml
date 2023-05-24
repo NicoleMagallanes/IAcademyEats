@@ -4,4 +4,14 @@
         <!-- Customize the theme attributes if needed -->
     </style>
 
+    <!-- Light Theme -->
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize other attributes -->
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize other attributes -->
+    </style>
+
 </resources>

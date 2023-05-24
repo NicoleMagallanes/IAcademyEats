@@ -21,9 +21,9 @@ class ConcessionaireSelectionActivity : AppCompatActivity() {
         concessionaire2Button = findViewById(R.id.concessionaire2Button)
         concessionaire3Button = findViewById(R.id.concessionaire3Button)
 
-        concessionaire1Button.setOnClickListener { openMenuActivity("Concessionaire 1") }
-        concessionaire2Button.setOnClickListener { openMenuActivity("Concessionaire 2") }
-        concessionaire3Button.setOnClickListener { openMenuActivity("Concessionaire 3") }
+        concessionaire1Button.setOnClickListener { openMenuActivity("The Coffee Bean & Tea Leaf") }
+        concessionaire2Button.setOnClickListener { openMenuActivity("Potato Corner") }
+        concessionaire3Button.setOnClickListener { openMenuActivity("Kitchen City") }
     }
 
     private fun openMenuActivity(concessionaireName: String) {

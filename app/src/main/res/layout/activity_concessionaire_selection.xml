@@ -4,112 +4,124 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ConcessionaireSelectionActivity">
 
     <!-- activity_concessionaire_selection.xml -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp">
 
         <LinearLayout
-            android:id="@+id/concessionaire1Layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:padding="20dp">
 
-            <ImageButton
-                android:id="@+id/concessionaire1Button"
-                android:layout_width="400dp"
-                android:layout_height="278dp"
-                android:background="@android:color/transparent"
-                android:contentDescription="Concessionaire 1"
-                android:scaleType="fitCenter"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/iac_cbtl" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:gravity="center"
-                android:textStyle="bold"
+            <LinearLayout
+                android:id="@+id/concessionaire1Layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="COFFE BEAN AND TEA LEAF" />
+                android:orientation="vertical"
+                android:gravity="center">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text="At The Coffee Bean and Tea Leaf®, the art of crafting the best tasting coffee requires respecting each individual roast. Knowing the specific origin and roast degree for each coffee allows for intense flavor that can be traced back to its earliest beginnings." />
+                <ImageButton
+                    android:id="@+id/concessionaire1Button"
+                    android:layout_width="400dp"
+                    android:layout_height="278dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Concessionaire 1"
+                    android:scaleType="fitCenter"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/iac_cbtl" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/textView"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="COFFE BEAN AND TEA LEAF"
+                    android:textColor="#000000" />
 
-        <LinearLayout
-            android:id="@+id/concessionaire2Layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="At The Coffee Bean and Tea Leaf®, the art of crafting the best tasting coffee requires respecting each individual roast. Knowing the specific origin and roast degree for each coffee allows for intense flavor that can be traced back to its earliest beginnings."
+                    android:textColor="#000000" />
 
-            <ImageButton
-                android:id="@+id/concessionaire2Button"
-                android:layout_width="400dp"
-                android:layout_height="278dp"
-                android:background="@android:color/transparent"
-                android:contentDescription="Concessionaire 1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/pocor" />
-            <TextView
-                android:id="@+id/textView1"
-                android:gravity="center"
-                android:textStyle="bold"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/concessionaire2Layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="POTATO CORNER" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text="Potato Corner’s claim to fame comes from its patented seasonings - BBQ, Chili BBQ, Sour Cream and Onion, and Cheddar Cheese. All orders are prepared fresh to ensure the best snacking experience for our customers. The Potato Corner brand carries with it a nostalgia born in the Philippines that has inspired immense customer loyalty." />
+                android:orientation="vertical"
+                android:gravity="center">
 
-        </LinearLayout>
+                <ImageButton
+                    android:id="@+id/concessionaire2Button"
+                    android:layout_width="400dp"
+                    android:layout_height="278dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Concessionaire 1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pocor" />
 
-        <LinearLayout
-            android:id="@+id/concessionaire3Layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+                <TextView
+                    android:id="@+id/textView1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="POTATO CORNER"
+                    android:textColor="#000000" />
 
-            <ImageButton
-                android:id="@+id/concessionaire3Button"
-                android:layout_width="400dp"
-                android:layout_height="278dp"
-                android:layout_marginBottom="20dp"
-                android:background="@android:color/transparent"
-                android:contentDescription="Concessionaire 1"
-                android:scaleType="fitCenter"
-                android:src="@drawable/iac_cafeteria" />
-            <TextView
-                android:id="@+id/textView2"
-                android:gravity="center"
-                android:textStyle="bold"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Potato Corner’s claim to fame comes from its patented seasonings - BBQ, Chili BBQ, Sour Cream and Onion, and Cheddar Cheese. All orders are prepared fresh to ensure the best snacking experience for our customers. The Potato Corner brand carries with it a nostalgia born in the Philippines that has inspired immense customer loyalty."
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/concessionaire3Layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="KITCHEN CITY" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text="Enjoy freshly prepared as well as grab-and-go items every day of the week, from classic favorites like fresh pizza, mac 'n cheese, and soups, to our tasty new plant-based taqueria station." />
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/concessionaire3Button"
+                    android:layout_width="400dp"
+                    android:layout_height="278dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Concessionaire 1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/iac_cafeteria" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KITCHEN CITY"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Enjoy freshly prepared as well as grab-and-go items every day of the week, from classic favorites like fresh pizza, mac 'n cheese, and soups, to our tasty new plant-based taqueria station."
+                    android:textColor="#000000" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
